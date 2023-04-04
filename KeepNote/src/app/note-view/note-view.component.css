@@ -1,0 +1,22 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+.card{
+    display: inline-flex;
+    width: 280px;
+    margin-left: 60px;
+    margin-top: 20px;
+    color:black;
+}
+.mat-icon{
+    margin-left:20px;
+}
+#mySpan{
+    color:gray;
+}
+#mySpan1{
+    background-color: gray;
+    padding: 7px;
+    border-radius: 20px;
+}

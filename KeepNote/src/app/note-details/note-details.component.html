@@ -1,0 +1,84 @@
+<div>
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>
+        <h3>{{notes.title}}
+          <mat-icon *ngIf="notes.priority === 'Critical'" color="accent">gpp_maybe</mat-icon>
+          <mat-icon *ngIf="notes.priority === 'High'" color="accent">arrow_circle_up</mat-icon>
+          <mat-icon *ngIf="notes.priority === 'Medium'" color="primary">remove_circle_outline</mat-icon>
+          <mat-icon *ngIf="notes.priority === 'Low'" color="primary">arrow_circle_down</mat-icon>
+        </h3>
+        <span id="mySpan">{{notes.reminderDate}}</span>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{notes.content}}</p>
+      <span id="mySpan1">{{notes.category}}</span>
+      <form action="#" #myForm="ngForm">
+        <mat-form-field class="formField">
+          <mat-label>Add New Notes</mat-label>
+          <input matInput type="text" #noteTitle="ngModel" placeholder="Note Title" [(ngModel)]="notes.title"
+            name="noteTitle" required>
+          <div *ngIf="noteTitle.invalid && (noteTitle.dirty || noteTitle.touched)">
+            <div *ngIf="noteTitle.errors?.['required']">
+              Note Title is Required
+            </div>
+          </div>
+        </mat-form-field>
+        <mat-form-field class="formField">
+          <textarea required matInput name="noteContent" #noteContent="ngModel" minlength="5" placeholder="Note Content"
+            id="" cols="30" [(ngModel)]="notes.content"></textarea>
+          <div *ngIf="noteContent.invalid && (noteContent.dirty || noteContent.touched)">
+            <div *ngIf="noteContent.errors?.['required']">
+              Note Content Is Required
+            </div>
+            <div *ngIf="noteContent.errors?.['minlength']">
+              Note Content Should Be Minimum 5 Characters
+            </div>
+          </div>
+        </mat-form-field>
+        <mat-form-field class="formField">
+          <input [matDatepicker]="picker" matInput type="text" #reminderDate="ngModel" placeholder="Reminder Date"
+            [(ngModel)]="notes.reminderDate" name="reminderDate" required>
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <div *ngIf="reminderDate.invalid && (reminderDate.dirty || reminderDate.touched)">
+            <div *ngIf="reminderDate.errors?.['required']">
+              Reminder Date is required
+            </div>
+          </div>
+        </mat-form-field>
+        <mat-form-field class="formField">
+          <mat-label>Add Category</mat-label>
+          <mat-select name="category" [(ngModel)]="notes.category" required #noteCategory="ngModel">
+            <mat-option value="Office">Office</mat-option>
+            <mat-option value="Review">Review</mat-option>
+          </mat-select>
+          <div *ngIf="noteCategory.invalid && (noteCategory.dirty || noteCategory.touched)">
+            <div *ngIf="noteCategory.errors?.['required']">
+              Category is Required
+            </div>
+          </div>
+        </mat-form-field>
+        <div class="example-full-width" id="forCheckBox">
+          <mat-radio-group name="priority" [(ngModel)]="notes.priority" required>
+            <p>Priority</p>
+            <mat-radio-button value="Low">Low</mat-radio-button>
+            <mat-radio-button value="Medium">Medium</mat-radio-button>
+            <mat-radio-button value="High">High</mat-radio-button>
+            <mat-radio-button value="Critical">Critical</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button color="accent" mat-icon-button (click)="editDetails()">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button color="accent" mat-icon-button (click)="deleteNotes()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

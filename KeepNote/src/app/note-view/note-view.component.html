@@ -1,0 +1,22 @@
+<div>
+    <mat-card *ngFor = "let note of indNote" class = "card">
+        <a routerLink = "../note-detail/{{note?.id}}">
+        <mat-card-header>
+            <mat-card-title>
+                <h3>{{note.title}}
+                <mat-icon *ngIf = "note.priority === 'Critical'" color = "accent">gpp_maybe</mat-icon>
+                <mat-icon *ngIf = "note.priority === 'High'" color = "accent">arrow_circle_up</mat-icon>
+                <mat-icon *ngIf = "note.priority === 'Medium'" color = "primary">remove_circle_outline</mat-icon>
+                <mat-icon *ngIf = "note.priority === 'Low'" color="primary">arrow_circle_down</mat-icon>
+                </h3>
+                <span id = "mySpan">{{note.reminderDate}}</span>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{note.content}}</p>
+            <span id = "mySpan1">{{note.category}}</span>
+        </mat-card-content>
+        </a>
+    </mat-card>
+    </div>
+   

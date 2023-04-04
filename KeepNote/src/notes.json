@@ -1,0 +1,52 @@
+{
+  "notes": [
+    {
+      "id": 2,
+      "title": "practice-exercise:",
+      "content": "solution development progress - exercise 1 solution ready, exercise 2 solution to be started",
+      "reminderDate": "2022-10-09T18:30:00.000Z",
+      "category": "Office",
+      "priority": "High"
+    },
+    {
+      "id": 5,
+      "title": "challenge",
+      "content": "Keep Note app solution development in progress. Header design completed. Code to display notes in progress.",
+      "reminderDate": "2022-09-09T18:30:00.000Z",
+      "category": "Review",
+      "priority": "Medium"
+    },
+    {
+      "title": "Review Meeting",
+      "content": "Documentation of project should be completed before review meeting",
+      "reminderDate": "2022-12-07T18:30:00.000Z",
+      "category": "Office",
+      "priority": "High",
+      "id": 6
+    },
+    {
+      "title": "Java Script",
+      "content": "Java Script is One of the Most Popular Language is being used for front end development",
+      "reminderDate": "2022-12-16T18:30:00.000Z",
+      "category": "Office",
+      "priority": "Low",
+      "id": 10
+    },
+    {
+      "title": "OOPS",
+      "content": "OOPS is Completely Based on Object Oriented Programming Language",
+      "reminderDate": "2022-12-12T18:30:00.000Z",
+      "category": "Review",
+      "priority": "Low",
+      "id": 12
+    },
+    {
+      "title": "Java Programming",
+      "content": "Java Programming is completely based on OOPS Concept",
+      "reminderDate": "2022-12-14T18:30:00.000Z",
+      "category": "Review",
+      "priority": "Critical",
+      "id": 13
+    }
+  ]
+}

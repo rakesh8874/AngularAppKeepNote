@@ -1,0 +1,7 @@
+<app-add-note (noteAdded) = "addNote($event)"></app-add-note>
+<app-search-note (eventProperty) = "searchOnText($event)"></app-search-note>
+<app-note-view [indNote] = "notes"></app-note-view>
+<div class="example-button-container">
+    <button mat-mini-fab color = "primary" id = "myBtn">
+      <mat-icon>add</mat-icon>
+    </button>

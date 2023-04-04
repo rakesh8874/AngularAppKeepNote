@@ -1,0 +1,9 @@
+<mat-toolbar color = "primary">
+    <span><a routerLink = "/">Keep Note</a></span>
+    <span></span>
+    <span id = "forSpace"></span>
+          <mat-icon><a routerLink = "/">home</a></mat-icon>
+         <mat-icon routerLink = "/login" *ngIf = "loginStatus===true">login</mat-icon>
+         <mat-icon *ngIf = "loginStatus===false" (click) = "logout()">logout</mat-icon>
+    </mat-toolbar>
+

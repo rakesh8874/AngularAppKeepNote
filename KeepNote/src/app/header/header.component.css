@@ -1,0 +1,11 @@
+#forSpace{
+    flex:1 1 auto;
+}
+mat-icon{
+    margin-right: 10px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
